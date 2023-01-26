@@ -110,8 +110,8 @@ def Handlemessages(teamcowboy: Teamcowboy, twilioclient: Client, twilionumber: s
         #         contactlist[str(player.userId)] = player.phone1
 
         # Spoof the contact list for testing
-        # contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER"), os.environ.get("BENTCUSERID"):os.environ.get("BENPHONENUMBER")} # w/ ben
-        contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER")} 
+        contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER"), os.environ.get("BENTCUSERID"):os.environ.get("BENPHONENUMBER")} # w/ ben
+        # contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER")} 
 
         for event in handledEvents:
 
