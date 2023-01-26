@@ -11,8 +11,8 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-teamcowboy-api)
 ![GitHub](https://img.shields.io/github/license/KCNilssen/TeamCowboyApi-Python) -->
 
-![Team Cowboy API](https://github.com/KCNilssen/Teamcowboy-Messenger/tree/main/.github/images/tcLogo_glow.png)
-![Twilio Messaging client](https://github.com/KCNilssen/Teamcowboy-Messenger/tree/main/.github/images/Twilio_logo_red.jpg)
+![Team Cowboy API](.github/images/tcLogo_glow.png)
+![Twilio Messaging client](.github/images/Twilio_logo.wine.jpg)
 
 <div align="left">
 
