@@ -9,10 +9,10 @@
 <!-- [![PyPI version](https://badge.fury.io/py/python-teamcowboy-api.svg)](https://badge.fury.io/py/python-teamcowboy-api)
 ![Main Branch Status](https://github.com/KCNilssen/TeamCowboyApi-Python/actions/workflows/build-and-test.yml/badge.svg?event=push)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-teamcowboy-api)
-![GitHub](https://img.shields.io/github/license/KCNilssen/TeamCowboyApi-Python)
+![GitHub](https://img.shields.io/github/license/KCNilssen/TeamCowboyApi-Python) -->
 
 ![Team Cowboy API](https://github.com/KCNilssen/Teamcowboy-Messenger/tree/main/.github/images/tcLogo_glow.png)
-![Twilio Messaging client](https://github.com/KCNilssen/Teamcowboy-Messenger/tree/main/.github/images/Twilio_logo_red.jpg) -->
+![Twilio Messaging client](https://github.com/KCNilssen/Teamcowboy-Messenger/tree/main/.github/images/Twilio_logo_red.jpg)
 
 <div align="left">
 
