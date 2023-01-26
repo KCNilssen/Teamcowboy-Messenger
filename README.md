@@ -12,7 +12,7 @@
 ![GitHub](https://img.shields.io/github/license/KCNilssen/TeamCowboyApi-Python) -->
 
 ![Team Cowboy API](.github/images/tcLogo_glow.png)
-![Twilio Messaging client](.github/images/Twilio_logo.wine.jpg)
+![Twilio Messaging client](.github/images/Twilio-Logo.wine.png)
 
 <div align="left">
 
