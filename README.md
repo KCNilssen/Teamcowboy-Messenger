@@ -17,22 +17,44 @@
 
 ## Getting Started
 
+*Teamcowboy-Messenger* is a Python script that with scheduled execution through github actions sends event alerts to team members from Team Cowboy via SMS using Twilio. *Teamcowboy-Messenger* Sends game event announcements four days before the event and game event reminders two days before the event. If there is an update to any event within the 4 day window, *Teamcowboy-Messenger* will alert team members via SMS to the updated event. 
+
+Api keys, login credentials and other sensitive information is safely stored and used with github secrets.
+
 
 <div align="center">
 
 
 <div align="left">
 
-## Installation
-- To be added, does not work yet
-```python
-python3 -m pip install python-teamcowboy-api
+
+## Github Actions Usage
+
+### Shedule
+```yml
+on:
+  schedule:
+    # Run every day at 4:25/3:25 (DST) pm PST
+    - cron:  '25 23 * * *'
+```
+### Secrets
+```yml
+- name: 
+    env:
+        PRIVATEAPIKEY: ${{ secrets.TCPRIVATEAPIKEY }}
+        PUBLICAPIKEY: ${{ secrets.TCPUBLICAPIKEY }} 
+        USERNAME: ${{ secrets.TCUSERNAME }}
+        PASSWORD: ${{ secrets.TCPASSWORD }}
+        TWILIOACCOUNTSID: ${{ secrets.TWILIOACCOUNTSID }}
+        TWILIOAUTHTOKEN: ${{ secrets.TWILIOAUTHTOKEN }}
+        TWILIOPHONENUMBER: ${{ secrets.TWILIOPHONENUMBER }}
+        MYPHONENUMBER: ${{ secrets.MYPHONENUMBER }}
+        BENPHONENUMBER: ${{ secrets.BENPHONENUMBER }}
+        TEAMNAME: ${{ secrets.TEAMNAME }}
 ```
 
-## Usage
-```python
-python3
->>> import teamcowboyapi
->>> Teamcowboy = teamcowboyapi.Teamcowboy(privateapikey, publicapikey, username, password)
->>> Teamcowboy.Event_Get(teamid, eventid)
+### Run
+```yml
+run: |
+    python3 ./eventmessenger.py TEAMNAME PRIVATEAPIKEY PUBLICAPIKEY USERNAME PASSWORD TWILIOACCOUNTSID TWILIOAUTHTOKEN TWILIOPHONENUMBER
 ```
