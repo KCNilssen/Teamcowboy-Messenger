@@ -30,7 +30,7 @@ Api keys, login credentials and other sensitive information is safely stored and
 
 ## Github Actions Usage
 
-### Shedule
+### Schedule
 ```yml
 on:
   schedule:
