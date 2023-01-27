@@ -3,10 +3,10 @@ name: Team Cowboy Event Messenger
 on:
   schedule:
     # Run every day at 4:25 pm PST
-    - cron:  '25 23 * * *'
+    - cron:  '25 */1 * * *'
 
 jobs:
-  catch_errors_and_report:
+  Teamcowboy Event Messenger:
 
     runs-on: ubuntu-latest
     strategy:
