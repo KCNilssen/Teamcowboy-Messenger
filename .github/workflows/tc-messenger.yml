@@ -28,16 +28,11 @@ jobs:
           python3 -m pip install --upgrade python-teamcowboy-api      
       - name: 
         env:
-          PRIVATEAPIKEY: ${{ secrets.TCPRIVATEAPIKEY }}
-          PUBLICAPIKEY: ${{ secrets.TCPUBLICAPIKEY }} 
-          USERNAME: ${{ secrets.TCUSERNAME }}
-          PASSWORD: ${{ secrets.TCPASSWORD }}
-          TWILIOACCOUNTSID: ${{ secrets.TWILIOACCOUNTSID }}
-          TWILIOAUTHTOKEN: ${{ secrets.TWILIOAUTHTOKEN }}
-          TWILIOPHONENUMBER: ${{ secrets.TWILIOPHONENUMBER }}
+          MYTCUSERID: ${{ secrets.MYTCUSERID }}           
           MYPHONENUMBER: ${{ secrets.MYPHONENUMBER }}
+          BENTCUSERID: ${{ secrets.BENTCUSERID }}
           BENPHONENUMBER: ${{ secrets.BENPHONENUMBER }}
           TEAMNAME: ${{ secrets.TEAMNAME }}
         run: |
-          python3 ./eventmessenger.py $TEAMNAME $PRIVATEAPIKEY $PUBLICAPIKEY $USERNAME $PASSWORD $TWILIOACCOUNTSID $TWILIOAUTHTOKEN $TWILIOPHONENUMBER
+          python3 ./eventmessenger.py ${{ secrets.TEAMNAME }} ${{ secrets.TCPRIVATEAPIKEY }} ${{ secrets.TCPUBLICAPIKEY }} ${{ secrets.TCUSERNAME }} ${{ secrets.TCPASSWORD }} ${{ secrets.TWILIOACCOUNTSID }} ${{ secrets.TWILIOAUTHTOKEN }} ${{ secrets.TWILIOPHONENUMBER }}
           
