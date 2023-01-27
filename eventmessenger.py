@@ -110,8 +110,8 @@ def Handlemessages(teamcowboy: Teamcowboy, twilioclient: Client, twilionumber: s
         #         contactlist[str(player.userId)] = player.phone1
 
         # Spoof the contact list for testing
-        contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER"), os.environ.get("BENTCUSERID"):os.environ.get("BENPHONENUMBER")} # w/ ben
-        # contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER")} 
+        # contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER"), os.environ.get("BENTCUSERID"):os.environ.get("BENPHONENUMBER")} # w/ ben
+        contactlist = {os.environ.get("MYTCUSERID"):os.environ.get("MYPHONENUMBER")} 
 
         for event in handledEvents:
 
@@ -402,7 +402,7 @@ def Handleteamevents(events: List[Event]) -> List[Eventmessage]:
     """
     nowdate = datetime.strptime(datetime.now().strftime("%Y-%m-%d"), '%Y-%m-%d')
     twodate = datetime.strptime((datetime.now() + timedelta(days=2)).strftime("%Y-%m-%d"), '%Y-%m-%d')
-    fourdate = datetime.strptime((datetime.now() + timedelta(days=8)).strftime("%Y-%m-%d"), '%Y-%m-%d')
+    fourdate = datetime.strptime((datetime.now() + timedelta(days=4)).strftime("%Y-%m-%d"), '%Y-%m-%d')
     handledevents = []
     
     for event in events:
@@ -456,3 +456,4 @@ def main(teamname:str, privateapikey:str, publicapikey:str, username:str, passwo
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8])
+
