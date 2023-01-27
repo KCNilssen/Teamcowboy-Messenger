@@ -447,6 +447,7 @@ def main(teamname:str, privateapikey:str, publicapikey:str, username:str, passwo
     password : str
         Team leaders account password
     """
+    print ("username: ", username)
     teamcowboy = Teamcowboy(privateapikey, publicapikey, username, password)
     twilioclient = Client(account_sid, auth_token)
     team_id = Getteamidfor(teamcowboy, teamname)
