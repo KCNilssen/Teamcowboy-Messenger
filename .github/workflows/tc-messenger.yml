@@ -2,8 +2,8 @@ name: Team Cowboy Event Messenger
 
 on:
   schedule:
-    # Run every day at 4:25 pm PST
-    - cron:  '*/10 * * * *'
+    # Run every day at 3:25/4:25 (DST) pm PST
+    - cron:  '25 23 * * *'
 
 jobs:
   Teamcowboy_Event_Messenger:
@@ -32,6 +32,8 @@ jobs:
           MYPHONENUMBER: ${{ secrets.MYPHONENUMBER }}
           BENTCUSERID: ${{ secrets.BENTCUSERID }}
           BENPHONENUMBER: ${{ secrets.BENPHONENUMBER }}
+          HARRYTCUSERID: ${{ secrets.HARRYTCUSERID }}
+          HARRYPHONENUMBER: ${{ secrets.HARRYPHONENUMBER }}
           TEAMNAME: ${{ secrets.TEAMNAME }}
         run: |
           python3 ./eventmessenger.py ${{ secrets.TEAMNAME }} ${{ secrets.TCPRIVATEAPIKEY }} ${{ secrets.TCPUBLICAPIKEY }} ${{ secrets.TCUSERNAME }} ${{ secrets.TCPASSWORD }} ${{ secrets.TWILIOACCOUNTSID }} ${{ secrets.TWILIOAUTHTOKEN }} ${{ secrets.TWILIOPHONENUMBER }}
