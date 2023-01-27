@@ -3,7 +3,7 @@ name: Team Cowboy Event Messenger
 on:
   schedule:
     # Run every day at 3:25/4:25 (DST) pm PST
-    - cron:  '25 23 * * *'
+    - cron:  '35 23 * * *'
 
 jobs:
   Teamcowboy_Event_Messenger:
