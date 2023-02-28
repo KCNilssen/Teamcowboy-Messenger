@@ -287,7 +287,7 @@ def Handleupdatedevent(event: Event) -> Eventmessage:
         Event object to handle updated event for
     """
     if event.dateLastUpdatedUtc != event.dateCreatedUtc:
-        if datetime.strptime(event.dateLastUpdatedUtc,'%Y-%m-%d %H:%M:%S').replace(tzinfo=timezone.utc) < (datetime.now(timezone.utc) - timedelta(days=1)):
+        if datetime.strptime(event.dateLastUpdatedUtc,'%Y-%m-%d %H:%M:%S').replace(tzinfo=timezone.utc) > (datetime.now(timezone.utc) - timedelta(days=1)):           
             return Eventmessage("updated", 
                                 event.eventType, 
                                 Createeventmessage(event, "updated"), 
