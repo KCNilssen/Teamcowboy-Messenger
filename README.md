@@ -48,8 +48,6 @@ on:
         TWILIOACCOUNTSID: ${{ secrets.TWILIOACCOUNTSID }}
         TWILIOAUTHTOKEN: ${{ secrets.TWILIOAUTHTOKEN }}
         TWILIOPHONENUMBER: ${{ secrets.TWILIOPHONENUMBER }}
-        MYPHONENUMBER: ${{ secrets.MYPHONENUMBER }}
-        BENPHONENUMBER: ${{ secrets.BENPHONENUMBER }}
         TEAMNAME: ${{ secrets.TEAMNAME }}
 ```
 
