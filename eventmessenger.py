@@ -179,7 +179,10 @@ def Addgamemessage(event: Event) -> str:
     event : Event
         Event object to create message for
     """
-    vstag = F"{event.homeAway} [{event.shirtColors.team1.title}] vs. {event.title} [{event.shirtColors.team2.title}]"
+    team1_color = event.shirtColors.team1.title if event.shirtColors.team1 and event.shirtColors.team1.title else "None"
+    team2_color = event.shirtColors.team2.title if event.shirtColors.team2 and event.shirtColors.team2.title else "None"
+
+    vstag = F"{event.homeAway} [{team1_color}] vs. {event.title} [{team2_color}]"
     dayofweek= datetime.strptime(event.dateTimeInfo.startDateLocal,'%Y-%m-%d').strftime('%A')
     datetag = F"{dayofweek} {event.dateTimeInfo.startDateLocalDisplay} @ {event.dateTimeInfo.startTimeLocalDisplay}"
     locationtag = F"{event.location.name}\n{event.location.address.displayMultiLine}"
