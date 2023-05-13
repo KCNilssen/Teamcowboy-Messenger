@@ -4,13 +4,6 @@
 
 **Event alert messenger for Team Cowboy using the twilio messaging client**
 
-<!-- ![Development Branch Status]() -->
-<!-- ![Periodic External Test Status]() -->
-<!-- [![PyPI version](https://badge.fury.io/py/python-teamcowboy-api.svg)](https://badge.fury.io/py/python-teamcowboy-api)
-![Main Branch Status](https://github.com/KCNilssen/TeamCowboyApi-Python/actions/workflows/build-and-test.yml/badge.svg?event=push)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-teamcowboy-api)
-![GitHub](https://img.shields.io/github/license/KCNilssen/TeamCowboyApi-Python) -->
-
 ![Logos](.github/images/tctwlogo.png)
 
 <div align="left">
