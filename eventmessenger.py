@@ -455,7 +455,11 @@ def main(teamname:str, privateapikey:str, publicapikey:str, username:str, passwo
     team_id = Getteamidfor(teamcowboy, teamname)
 
     teamevents = Handleteamevents(teamcowboy.User_GetTeamEvents(teamId=team_id))
-    Handlemessages(teamcowboy, twilioclient, phonenumber, teamevents)
+
+    if not teamevents:
+        print ("No upcoming team events scheduled")
+    else:
+        Handlemessages(teamcowboy, twilioclient, phonenumber, teamevents)
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8])
