@@ -408,9 +408,10 @@ def Handleteamevents(events: List[Event]) -> List[Eventmessage]:
     fourdate = datetime.strptime((datetime.now() + timedelta(days=4)).strftime("%Y-%m-%d"), '%Y-%m-%d')
     handledevents = []
     
-    for event in events:
-        eventdate = datetime.strptime(event.dateTimeInfo.startDateLocal, '%Y-%m-%d')
-        handledevent = None
+    if events:
+        for event in events:
+            eventdate = datetime.strptime(event.dateTimeInfo.startDateLocal, '%Y-%m-%d')
+            handledevent = None
 
         if eventdate == nowdate:
             handledevent = Handletodayevent(event) 
@@ -455,11 +456,7 @@ def main(teamname:str, privateapikey:str, publicapikey:str, username:str, passwo
     team_id = Getteamidfor(teamcowboy, teamname)
 
     teamevents = Handleteamevents(teamcowboy.User_GetTeamEvents(teamId=team_id))
-
-    if not teamevents:
-        print ("No upcoming team events scheduled")
-    else:
-        Handlemessages(teamcowboy, twilioclient, phonenumber, teamevents)
+    Handlemessages(teamcowboy, twilioclient, phonenumber, teamevents)
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8])
